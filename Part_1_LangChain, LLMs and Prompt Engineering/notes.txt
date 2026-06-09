@@ -1,0 +1,88 @@
+Phase 1 => Research Layer
+Phase 2 => Bedrock Models
+Phase 3 => Providers
+Phase 4 => You are going to use the LLM models and create some great AI applications
+
+Question 1 => What is LLM?
+
+Large => It is trained on huge amount of text data e.g books, websites, articles etc
+Language => It understands human language e.g. english, hindi, Spanish, programming etc
+Model => It is deep learning system (a neural network) that learns from data, because created using transformer architecture
+
+When you type python => it converts to number and create embeddings
+
+GPT models, Gemini models, LLaMA, Claude, Grok, Mistral etc
+
+In Gen AI we learn to use these models effectively
+
+Langchain is solution for different syntax of each model
+
+Langchain changes everything
+
+There are mainly 6 components in langchain :-
+
+1)Models => Models are core intelligence layer.
+They generates text, embeddings, or other outputs.
+They connect your application to LLM providers like: OpenAI, Google DeepMind, Antropic
+
+Types of models :-
+Chat Models, Embedding Models, Multimodal Models
+
+2)Prompts => Prompt is the instruction we give to language model
+
+It tells model:
+What to do, How to respond, What format to use
+
+Types of prompts :-
+1)Simple Prompt
+2)System + User Prompt
+3)Prompts Templates
+4)Structures Prompts
+
+3)Chains => A chain is the sequence of steps connected together
+Instead of one prompt -> One Response
+Step 1 -> Step 2 -> Step 3 -> Final Output
+
+e.g. Summarize this article and translate to hindi:-
+1)Summarize Text
+2)Translate Summary
+3)Return Result
+
+
+4)Memory => Allows the AI system to remember the past interactions
+Without memory => Every message is treated independently and with memory the model can use previous context
+
+e.g. My name is MAS
+Now what is my Name?
+
+5)Indexes =>  Indexes allow only to connect external data to an LLM => LLMs only know what they were trained on, indexed help them use =>
+pdfs, documents, databases, company data, websites
+
+for searching, RAG, for connecting the information on which the model is not trained
+
+6)Agents => Agents are AI systems that can decide what action to take.
+Unlike normal chains:
+Chains => Follow fixed steps
+Agents => Decide the next step dynamically
+
+e.g:-
+
+Normal LLM:-
+User => Prompt => Response
+
+But what if the task requires:-
+Searching the web
+Doing calculations
+Calling an API
+Using a database
+
+The LLM alone cant do that
+It need tools
+
+To setup python venv well install UV, an extremely fast python env package manager, pip, uv faster
+
+Either you an use the model locally or api
+
+Locally it takes lots of space
+
+for creative task like poetry so temperature parameter near to 1 and if mathematical task so near to 0

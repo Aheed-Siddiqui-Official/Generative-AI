@@ -1,0 +1,40 @@
+# Create .gitignore with proper content
+@'
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.env.*
+!.env.example
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Jupyter
+.ipynb_checkpoints
+
+# LangChain / Vector stores
+chroma/
+vectorstore/
+faiss_index/
+*.faiss
+*.pkl
+'@ | Out-File -Encoding utf8 .gitignore
