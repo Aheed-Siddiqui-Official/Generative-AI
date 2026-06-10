@@ -1,0 +1,32 @@
+CourseMate AI
+
+Study assistant designed to help students
+Chat through pdfs
+Exact question answers from students
+
+e.g. external data connections with you LLM is called RAG pipeline
+
+Step 1 : User uploads study material, pdf
+Step 2 : Document Loading => convert raw files into document objects that can be processed
+You may clean the document as well, like punctuations, spaces etc
+Step 3 : Text Splitting/Chunking
+Documents are usually too large for LLM context windows, So we split them into smaller chunks
+Chunking improves retrieval accuracy
+Step 4 : Embedding Generation => Because system only understands number
+Step 5 : Storing the embeddings in Vector databases
+Step 6 : User asks question
+Step 7 : Query Embedding => question also converted into embeddings
+Step 8 : Similarity Search => The vector db performs semantic similarity search
+Fining most similar chunks related to question
+Step 9 : Retriever Component
+Step 10 : LLM answers
+
+RAG (Retrieval Augmented Generation)=> 
+1) Document Loader
+2) Text Splitter
+3) Database
+4) Retrievers
+
+docs are made to deal with the pdfs
+
+print(len(docs)) in pdf.py 15 documents in array with meta data and page content
