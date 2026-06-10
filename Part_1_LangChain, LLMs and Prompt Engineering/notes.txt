@@ -86,3 +86,30 @@ Either you an use the model locally or api
 Locally it takes lots of space
 
 for creative task like poetry so temperature parameter near to 1 and if mathematical task so near to 0
+
+Prompt Templates
+
+CineSage wants to build AI powered tool
+1) Takes raw para as input
+2)Extracts important structures information
+3)Generates a clean summary
+4)Returns in JSON format
+5)Stores it in their db
+
+well do all the above work using chat prompt templates
+
+template is a type of structures prompt we can use it again and again
+
+to avoid writing single line of code again and again
+
+we can invoke this prompt thats why it is called runnable
+
+companies wants structures output in machine readable format
+
+thats why our model should do this
+
+pydantic used for making JSON output
+
+first well make a schema
+
+for JSON object will use pydantic and schema
