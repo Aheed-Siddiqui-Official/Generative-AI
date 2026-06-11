@@ -70,3 +70,19 @@ pdf => n number of chunks => create embeddings [0.44, .....] 512 dimensions embe
 one lac embeddings of 512 dimensions and will store in vector store
 
 well do query => what does the book says about NLP => query will be converted to embeddings => well send embedding in vector db => there it will do similarity search in that vector db 1 lack embeddings
+
+Vector stores dont search using similarity or cosine algos
+
+They search using Approximate Nearest Neighbor Algorithm => HNSW IVF PQ and all these are indexing techniques and faster
+
+IVF => we divide db in 5 clusters using K-Means clustering 1 lac 5 clusters => 5 embeddings will be made NLP RNN CNN KNN GRU => then well compare the query with all embeddings centroid => after that well directly search in NLP one that query matches => this makes the algorithm 5 times faster
+
+query phase -> Query text -> embedding model -> query vector -> similarity search -> vector store -> result
+
+indexing phase -> documents -> embedding model -> embedding vector -> vector store -> result
+
+chroma SQLite
+
+vector store is responsible for retrieving answers not for giving answer for it LLM is used
+
+value of k means how many embedding result you want 
