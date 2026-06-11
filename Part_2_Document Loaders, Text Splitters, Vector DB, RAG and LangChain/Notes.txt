@@ -30,3 +30,43 @@ RAG (Retrieval Augmented Generation)=>
 docs are made to deal with the pdfs
 
 print(len(docs)) in pdf.py 15 documents in array with meta data and page content
+
+in large pdfs context limit problem arrives thats why well learn chunking in upcoming part
+
+Chunking problem in RAG
+
+1) Better retrieval in RAG
+
+2) More Accurate Embeddings
+
+3) Faster Processing => Retrieving in Vector DB
+
+there are 3 types of text splitting
+
+=>1) Character Based Splitting => it will make chunks on the basis of characters quantity e.g. 10 characters also includes spaces in the characters
+=>2) Token Based Splitting => Divides documents into chunks based on the number of tokens not characters
+Since LLMs process tokens instead of words this method aligns better with how models actually read text
+
+depends on chunk size
+e.g. [hello how are you] => ["hello" "how" "are" "you"] => ["hello how" "are you"] 
+
+when chunks are created they also contain meta data and page_content
+
+=> Recursive Text Splitting => divides the document into chunks based on the meaning and structure of the text, rather than characters or tokens. The goal is to keep complete ideas together so that each chunk contains a coherent piece of information
+ or 
+dont depends on chunk size only depends on the meaning of the words
+
+e.g. if the meaning creates of 9 it will combine only 9 characters
+
+=>3) Semantic Meaning Based Splitting => e.g. if there are 2 sentences and we have made 2 different embeddings of that sentences
+After that well compare those sentences and find similarity between those sentences and set a threshold of e.g. 0.5 in that threshold well find that if the similarity in the sentences matches well convert them into a single embedding and a single sentence or chunk or token
+
+now well create chunks/embeddings and store in vector dbs and from there out LLM will call them
+
+embedding will be generated with models and model also have a context window
+
+Vector Store
+pdf => n number of chunks => create embeddings [0.44, .....] 512 dimensions embeddings => well store these embeddings in vector store
+one lac embeddings of 512 dimensions and will store in vector store
+
+well do query => what does the book says about NLP => query will be converted to embeddings => well send embedding in vector db => there it will do similarity search in that vector db 1 lack embeddings
