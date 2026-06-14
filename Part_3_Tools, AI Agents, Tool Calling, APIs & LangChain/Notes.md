@@ -389,6 +389,8 @@ create\_agent hides this complexity to make development faster, cleaner, and eas
 
 
 
+whole session state is created not done manually automated
+
 
 
 
