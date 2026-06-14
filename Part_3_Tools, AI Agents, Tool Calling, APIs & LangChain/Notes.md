@@ -355,3 +355,47 @@ tool is not an agent
 
 
 
+# AI agents:- Brain + Tools + Decision Making
+
+
+
+React is type of thing we use to make agents
+
+
+
+create agent in langchain
+
+
+
+you dont need to bind tools with llm you can directly call them
+
+
+
+create\_agent is a high-level abstraction provided by LangChain that automates everything
+
+we manually implemented in our agent. Instead of writing the loop, handling tool calls,
+
+managing messages, and deciding when to stop, we simply define the model and the tools, and
+
+the framework takes care of the entire execution process internally. The core logic remains the
+
+same the LLM still decides which tool to use, tools still fetch external data, and results are
+
+passed back for final response generation but all of this happens behind the scenes. The main
+
+difference is that our manual approach gives full control and visibility over each step, while
+
+create\_agent hides this complexity to make development faster, cleaner, and easier to scale.
+
+
+
+
+
+
+
+
+
+
+
+
+
